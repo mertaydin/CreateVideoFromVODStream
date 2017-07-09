@@ -82,7 +82,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 23);
             this.button2.TabIndex = 4;
-            this.button2.Text = "ESKİ DOSYALARI SİL";
+            this.button2.Text = "DELETE OLD FİLES";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -118,18 +118,18 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(342, 23);
             this.button3.TabIndex = 8;
-            this.button3.Text = "VİDEOYU OYNAT";
+            this.button3.Text = "PLAY OUTPUT VIDEO";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 48);
+            this.label2.Location = new System.Drawing.Point(0, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "YENİ iSİM";
+            this.label2.Text = "NEW NAME";
             // 
             // textBox2
             // 
