@@ -26,7 +26,8 @@ namespace CreateVideoFromHLS
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {                
+        {
+            button3.Enabled = false;
             backgroundWorker1.RunWorkerAsync();        
         }
 
@@ -73,7 +74,7 @@ namespace CreateVideoFromHLS
                 label1.Text = i.ToString();
             }*/
 
-            concatTsFiles(tsFiles);
+            concatTsFiles(tsFiles, textBox2.Text);
         }
 
         public byte[] GetFileViaHttp(string url)
@@ -128,7 +129,7 @@ namespace CreateVideoFromHLS
             proc.Close();
         }
 
-        static void concatTsFiles(ArrayList tsFiles)
+        static void concatTsFiles(ArrayList tsFiles, string outputFileName = "output")
         {
             string concatString = "";
             string ffmpegCommand = "";
@@ -137,14 +138,15 @@ namespace CreateVideoFromHLS
                 concatString = concatString + file + "|";
             }
             concatString = concatString.Remove(concatString.Length - 1, 1);
-            ffmpegCommand = "-i \"concat:" + concatString + "\" -c copy output.ts";
+            ffmpegCommand = "-i \"concat:" + concatString + "\" -c copy " +  outputFileName + ".ts";
             Console.WriteLine(ffmpegCommand);
             FFmpegConversion(ffmpegCommand);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            listBox1.Items.Add("BİTTİ!");
+            listBox1.Items.Add("FINISHED!");
+            button3.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -162,6 +164,13 @@ namespace CreateVideoFromHLS
         {
             string partFile = Path.GetFullPath(listBox1.GetItemText(listBox1.SelectedItem));
             axWindowsMediaPlayer1.URL = partFile;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string lastFileName = textBox2.Text != "" ? textBox2.Text : "output";
+            axWindowsMediaPlayer1.URL = lastFileName + ".ts";
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
     }
