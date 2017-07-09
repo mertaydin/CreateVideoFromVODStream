@@ -129,10 +129,11 @@ namespace CreateVideoFromHLS
             proc.Close();
         }
 
-        static void concatTsFiles(ArrayList tsFiles, string outputFileName = "output")
+        static void concatTsFiles(ArrayList tsFiles, string outputFileName)
         {
             string concatString = "";
             string ffmpegCommand = "";
+            outputFileName = outputFileName != "" ? outputFileName : "output";
             foreach (string file in tsFiles)
             {
                 concatString = concatString + file + "|";
