@@ -6,3 +6,8 @@ c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVid
 c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.csproj.GenerateResource.Cache
 c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.exe
 c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.pdb
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\bin\Debug\Interop.WMPLib.dll
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\Interop.WMPLib.dll
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.csproj.ResolveComReference.cache

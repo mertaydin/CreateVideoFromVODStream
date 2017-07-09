@@ -50,7 +50,7 @@ namespace CreateVideoFromHLS
                 string tsFileName = line.ToString();
                 string tsFullPathFileName = fileNameWithoutM3u8 + tsFileName;
                 tsFiles.Add(tsFileName);
-                textBox2.AppendText(tsFileName + " indiriliyor..." + Environment.NewLine);
+                listBox1.Items.Add(tsFileName);
                 downloadFile(tsFullPathFileName, tsFileName);
                 progressBar1.Value = myCounter;
             }
@@ -91,7 +91,7 @@ namespace CreateVideoFromHLS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox2.ScrollBars = ScrollBars.Both;
+            
         }
 
         private void downloadFile(string fullPath, string fileName)
@@ -144,7 +144,7 @@ namespace CreateVideoFromHLS
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            textBox2.AppendText("BİTTİ!");
+            listBox1.Items.Add("BİTTİ!");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -156,6 +156,13 @@ namespace CreateVideoFromHLS
                     File.Delete(file);
                 }
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string partFile = Path.GetFullPath(listBox1.GetItemText(listBox1.SelectedItem));
+            axWindowsMediaPlayer1.URL = partFile;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
     }
 }
