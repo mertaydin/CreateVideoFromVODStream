@@ -1,0 +1,9 @@
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\bin\Debug\CreateVideoFromHLS.exe.config
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\bin\Debug\CreateVideoFromHLS.exe
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\bin\Debug\CreateVideoFromHLS.pdb
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.Form1.resources
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.Properties.Resources.resources
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.csproj.GenerateResource.Cache
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.exe
+c:\users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.pdb
+C:\Users\asus\documents\visual studio 2015\Projects\CreateVideoFromHLS\CreateVideoFromHLS\obj\Debug\CreateVideoFromHLS.csprojResolveAssemblyReference.cache
