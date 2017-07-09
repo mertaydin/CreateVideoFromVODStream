@@ -39,12 +39,26 @@ namespace CreateVideoFromHLS
             string str = Encoding.UTF8.GetString(result);
             string[] words = str.Split('\n');
 
-            for (Int64 i = 0; i < words.Length; i++)
+            Regex r = new Regex(@"(.*)\.ts");
+            MatchCollection collectionCount = r.Matches(str);
+            progressBar1.Maximum = collectionCount.Count;
+
+            int myCounter = 0;
+            foreach (var line in collectionCount)
+            {
+                ++myCounter;
+                string tsFileName = line.ToString();
+                string tsFullPathFileName = fileNameWithoutM3u8 + tsFileName;
+                tsFiles.Add(tsFileName);
+                textBox2.AppendText(tsFileName + " indiriliyor..." + Environment.NewLine);
+                downloadFile(tsFullPathFileName, tsFileName);
+                progressBar1.Value = myCounter;
+            }
+
+            /*for (Int64 i = 0; i < words.Length; i++)
             {
                 string line = words[i].ToString() + "\n\n";
-
-                Regex r = new Regex(@"(.*)\.ts");
-
+                
                 if (r.IsMatch(line.ToString()))
                 {
                     MatchCollection myMatchCollection = r.Matches(line);
@@ -52,11 +66,12 @@ namespace CreateVideoFromHLS
                     string tsFullPathFileName = fileNameWithoutM3u8 + tsFileName;
                     tsFiles.Add(tsFileName);
                     textBox2.AppendText(tsFileName + " indiriliyor..." + Environment.NewLine);
-                    downloadFile(tsFullPathFileName, tsFileName);                    
+                    downloadFile(tsFullPathFileName, tsFileName);
+                    progressBar1.Value = Convert.ToInt32(i);             
                 }
                 
                 label1.Text = i.ToString();
-            }
+            }*/
 
             concatTsFiles(tsFiles);
         }
