@@ -49,8 +49,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(410, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "http://o1.tvod.stream/vod/b520ff8d-Zor-Sevda-49Bolum-Fragmani-7-Temmuz-Cuma.mp4/t" +
-    "racks-v1a1/index.m3u8";
+            this.textBox1.Text = "http://www.anydomain.com/any/path/here/index.m3u8";
             // 
             // label1
             // 
